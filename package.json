@@ -1,0 +1,27 @@
+{
+  "name": "Neebie-s-music-bot-in-discord",
+  "version": "1.0.0",
+  "description": "I want to build a music bot on discord using discord APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-Z-Z/Neebie-s-music-bot-in-discord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrew-Z-Z/Neebie-s-music-bot-in-discord/issues"
+  },
+  "homepage": "https://github.com/Andrew-Z-Z/Neebie-s-music-bot-in-discord#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.2.0",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^2.1.7"
+  }
+}
