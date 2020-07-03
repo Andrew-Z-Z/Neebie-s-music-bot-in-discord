@@ -4,7 +4,7 @@
   "description": "I want to build a music bot on discord using discord APIs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,11 +17,20 @@
     "url": "https://github.com/Andrew-Z-Z/Neebie-s-music-bot-in-discord/issues"
   },
   "homepage": "https://github.com/Andrew-Z-Z/Neebie-s-music-bot-in-discord#readme",
+  "nodemonConfig": {
+    "watch": [
+      "index.js"
+    ]
+  },
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "discord.js": "^12.2.0",
     "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.5",
     "fluent-ffmpeg": "^2.1.2",
     "ytdl-core": "^2.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
