@@ -1,3 +1,4 @@
 node_modules
 .eslintignore
 config.json
+/commands/potentialBugs.md
