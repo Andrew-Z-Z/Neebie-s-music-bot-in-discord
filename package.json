@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Andrew-Z-Z/Neebie-s-music-bot-in-discord#readme",
   "nodemonConfig": {
     "watch": [
-      "index.js"
+      "index.js",
+      "./commands"
     ]
   },
   "dependencies": {
@@ -28,9 +29,22 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.2.5",
     "fluent-ffmpeg": "^2.1.2",
-    "ytdl-core": "^2.1.7"
+    "ytdl-core": "^2.1.7",
+    "ytdl-core-discord": "^1.2.1",
+    "ytdl-getinfo": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2019
+    },
+    "rules": {}
   }
 }
