@@ -1,10 +1,11 @@
-const ytdl = require('ytdl-core');
+const ytdl = require('ytdl-core-discord');
 const { getInfo } = require('ytdl-getinfo');
 
 module.exports = {
   name: "play",
   description: "Play the Music in the Queue",
   async execute(message, args) {
+    if (!args.length) return;
     try {
       const queue = message.client.queue;
       const serverQueue = queue.get(message.guild.id);
@@ -57,7 +58,7 @@ module.exports = {
       message.channel.send("Outside Error")
     }
   },
-  play(message, song) {
+  async play(message, song) {
     const queue = message.client.queue;
     const guild = message.guild;
     const serverQueue = queue.get(guild.id);
@@ -69,7 +70,7 @@ module.exports = {
     }
 
     const dispatcher = serverQueue.connection
-    .play(ytdl(song.url, {type: 'opus', filter: 'audioonly'}))
+    .play(await ytdl(song.url), { type: 'opus' })
     .on('finish', () => {
       serverQueue.songs.shift();
       this.play(message, serverQueue.songs[0])
